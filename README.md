@@ -1,2 +1,16 @@
 # kubernetes-training
 Kubernetes is an open-source platform that automates deploying, scaling, and managing containerized applications. It organizes containers into pods, handles load balancing, self-healing, and rolling updates, and provides a reliable, scalable environment for running modern cloud-native applications across clusters.
+
+
+Key components in Kubernetes:
+
+  1. kubectl  : It gives the command to API Server
+  2. API Server : It takes the request and respond accordingly - just like server for communication gateway.
+  3. Scheduler : To schedule container/pods on Worker Nodes
+  4. etcd : It is key-value pair database to store the information of master and worker nodes.
+  5. Controller Manager : It is the manager for both master and worker nodes managing everything
+  6. kubelet : Manages everything on Worker Node.
+  7. Pods : It is smallest unit in kubernetes i.e Docker Container
+  8. Server Proxy / kubeproxy : It is the service to provide access to the user to connect the container from outside.
+  9. User : Person
+  10. CNI Network : Network to create a communicate channel between the services of the Master and Worker Nodes.
