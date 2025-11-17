@@ -22,10 +22,12 @@ Kubernetes is an open-source platform that automates deploying, scaling, and man
 
 ## Pre-requisite for Kubernetes Cluster Setup
 
-**Local/Provisioning Tools** : kubeadm, minikube, kind  
-**Managed Kubernetes Services** : EKS, GKE, AKS → Managed Kubernetes Services
+**1. Kubernetes Core Packages**  
 
-*kubeadm* : install on production server to create kubernetes cluster.  
-*kind* : kubernetes in docker : install on docker container to create kubernetes cluster.  
-*minikube* : lightweight single node kubernetes means for learning and development purpose.  
+  **Local/Provisioning Tools** : kubeadm, minikube, kind  
+  **Managed Kubernetes Services** : EKS, GKE, AKS → Managed Kubernetes Services
+
+  *kubeadm* : install on production server to create kubernetes cluster.  
+  *kind* : kubernetes in docker : install on docker container to create kubernetes cluster.  
+  *minikube* : lightweight single node kubernetes means for learning and development purpose.  
 
