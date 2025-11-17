@@ -25,7 +25,7 @@ Kubernetes is an open-source platform that automates deploying, scaling, and man
 **1. Kubernetes Core Packages**  
 
   **Local/Provisioning Tools** : kubeadm, minikube, kind  
-  **Managed Kubernetes Services** : EKS, GKE, AKS → Managed Kubernetes Services
+  **Managed Kubernetes Services** : EKS, GKE, AKS
 
   *kubeadm* : install on production server to create kubernetes cluster.  
   *kind* : kubernetes in docker : install on docker container to create kubernetes cluster.  
@@ -42,3 +42,42 @@ Kubernetes is an open-source platform that automates deploying, scaling, and man
 ## Setup Kubernetes Cluster
 
   Follow README.md under setup-cluster
+
+## Namespace
+
+  A unit in which all the resources are allocated to a group.
+
+  ```
+    kubectl get namespace
+    kubectl get ns
+
+    kubectl get pods
+    Note: show the pods of default namespace
+
+    kubectl get pods -n <namespace>
+  ```
+
+### Create Namespace
+
+  ```
+    # Creating namespace
+    kubectl create ns nginx
+    
+    # run the pod
+    kubectl run nginx --image=nginx
+    kubectl get pods
+
+    # delete the pod
+    kubectl delete pod nginx
+
+    # run the pod in the namespace nginx  
+    kubectl run nginx --image=nginx -n nginx
+    kubectl get pods -n nginx
+
+    # delete the pod in the namespace nginx
+    kubectl delete pod nginx -n nginx
+
+    # delete the namespace
+    kubectl delete ns nginx
+  ```
+
