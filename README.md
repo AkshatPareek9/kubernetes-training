@@ -14,3 +14,9 @@ Key components in Kubernetes:
   8. Server Proxy / kubeproxy : It is the service to provide access to the user to connect the container from outside.
   9. User : Person
   10. CNI Network : Network to create a communicate channel between the services of the Master and Worker Nodes.
+
+
+<img width="500" height="500" alt="image" src="https://github.com/user-attachments/assets/5cb32ace-eb25-42ce-9bdf-ced921905eb0" />  
+
+<img width="500" height="500" alt="image" src="https://github.com/user-attachments/assets/7bcc58ca-5976-45aa-a2d4-ca6bd82375be" />
+
