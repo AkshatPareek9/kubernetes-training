@@ -32,5 +32,9 @@ Kubernetes is an open-source platform that automates deploying, scaling, and man
   *minikube* : lightweight single node kubernetes means for learning and development purpose.  
 
 **2. Docker container**  
-**3. kubectl**  
+  *Known Issue*  
+    *Command: docker ps*  
+    *Error: Permission denied*  
+    *Resolution : sudo usermod -aG docker $USER && newgrp docker*  
 
+**3. kubectl**  
