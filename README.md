@@ -31,3 +31,6 @@ Kubernetes is an open-source platform that automates deploying, scaling, and man
   *kind* : kubernetes in docker : install on docker container to create kubernetes cluster.  
   *minikube* : lightweight single node kubernetes means for learning and development purpose.  
 
+**2. Docker container**  
+**3. kubectl**  
+
