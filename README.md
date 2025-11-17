@@ -25,3 +25,7 @@ Kubernetes is an open-source platform that automates deploying, scaling, and man
 **Local/Provisioning Tools** : kubeadm, minikube, kind  
 **Managed Kubernetes Services** : EKS, GKE, AKS → Managed Kubernetes Services
 
+*kubeadm* : install on production server to create kubernetes cluster.  
+*kind* : kubernetes in docker : install on docker container to create kubernetes cluster.  
+*minikube* : lightweight single node kubernetes means for learning and development purpose.  
+
