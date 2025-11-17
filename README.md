@@ -38,3 +38,7 @@ Kubernetes is an open-source platform that automates deploying, scaling, and man
     *Resolution : sudo usermod -aG docker $USER && newgrp docker*  
 
 **3. kubectl**  
+
+## Setup Kubernetes Cluster
+
+  Follow README.md under setup-cluster
