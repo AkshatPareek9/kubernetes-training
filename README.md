@@ -1,8 +1,8 @@
 # kubernetes-training
+
 Kubernetes is an open-source platform that automates deploying, scaling, and managing containerized applications. It organizes containers into pods, handles load balancing, self-healing, and rolling updates, and provides a reliable, scalable environment for running modern cloud-native applications across clusters.
 
-
-Key components in Kubernetes:
+## Key components in Kubernetes:
 
   1. kubectl  : It gives the command to API Server
   2. API Server : It takes the request and respond accordingly - just like server for communication gateway.
@@ -15,8 +15,13 @@ Key components in Kubernetes:
   9. User : Person
   10. CNI Network : Network to create a communicate channel between the services of the Master and Worker Nodes.
 
+## Architecture of Kubernetes
 
 <img width="500" height="500" alt="image" src="https://github.com/user-attachments/assets/5cb32ace-eb25-42ce-9bdf-ced921905eb0" />  
-
 <img width="500" height="500" alt="image" src="https://github.com/user-attachments/assets/7bcc58ca-5976-45aa-a2d4-ca6bd82375be" />
+
+## Pre-requisite for Kubernetes Cluster Setup
+
+**Local/Provisioning Tools** : kubeadm, minikube, kind  
+**Managed Kubernetes Services** : EKS, GKE, AKS → Managed Kubernetes Services
 
