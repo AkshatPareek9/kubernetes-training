@@ -122,3 +122,16 @@ Kubernetes is an open-source platform that automates deploying, scaling, and man
 
   A StatefulSet manages stateful applications requiring stable, unique Pod identifiers, deterministic ordering, and dedicated persistent volumes. It guarantees stable network names, persistent storage, and ordered rollout/scale operations.
 
+## Why rolling updates in deployment is different from ReplicaSet and StatefulSet?
+
+  Rolling updates differ because Deployments manage ReplicaSets and implement rolling update logic. ReplicaSets alone don’t support updates. StatefulSets support rolling updates but in an ordered, slower, and safe way due to stable Pod identity and persistent storage requirements.
+
+  1. Deployment – Rolling Update is Fully Supported
+    
+     Deployments are designed for updates.
+  
+  - Deployment manages ReplicaSets
+  - When you update a Deployment (image, env, etc.)
+  - It creates a new ReplicaSet
+  - Gradually scales down old RS and scales up new RS
+  - This is the standard rolling update strategy
