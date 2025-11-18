@@ -26,7 +26,7 @@
 ```
   kubectl apply -f deployment.yaml
   kubectl get deployment -n nginx
-  kubectl get pods -n nginx
+  kubectl get pods -n nginx -o wide
   kubectl delete -f deployment.yaml
 ```
 
@@ -40,3 +40,20 @@
 ```
 
 <img width="300" height="300" alt="image" src="https://github.com/user-attachments/assets/49026e92-d1ee-4e2d-98be-e0500ce46d74" />
+
+# replicasets.yaml
+
+```
+  kubectl apply -f replicasets.yaml
+  kubectl get replicasets -n nginx
+  kubectl get pods -n nginx -o wide
+  kubectl delete -f replicasets.yaml
+```
+
+# daemonsets.yaml
+
+```
+  kubectl apply -f daemonsets.yaml
+  kubectl get pods -n nginx -o wide
+  kubectl delete -f daemonsets.yaml
+```
