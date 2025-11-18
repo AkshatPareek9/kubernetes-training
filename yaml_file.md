@@ -19,6 +19,7 @@
 ```
   kubectl exec -it pod/nginx-pod -n nginx -- bash
   kubectl describe pod/nginx-pod -n nginx
+  kubectl logs pod/nginx-pod -n nginx
 ```
 
 # deployment.yaml
