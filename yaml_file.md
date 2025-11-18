@@ -54,6 +54,23 @@
 
 ```
   kubectl apply -f daemonsets.yaml
+  kubectl get daemonset -n nginx -o wide
   kubectl get pods -n nginx -o wide
   kubectl delete -f daemonsets.yaml
+```
+
+# jobs.yaml
+
+```
+  kubectl apply -f jobs.yaml
+  kubectl get job -n nginx -o wide
+  kubectl delete -f jobs.yaml
+```
+
+# cronjobs.yaml
+
+```
+  kubectl apply -f cronjob.yaml
+  kubectl get cronjob -n nginx -o wide
+  kubectl delete -f cronjob.yaml
 ```
