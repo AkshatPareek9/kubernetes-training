@@ -1,0 +1,44 @@
+kind: CronJob
+apiVersion: batch/v1          # batch -> parallely work
+metadata:
+  name: democronjob
+  namespace: nginx
+
+spec:
+  schedule: "*/2 * * * * *"
+  jobTemplate:
+    spec:
+      template:
+        metadata:
+          name: demo-cronjob
+          labels:
+            app: batch-task
+            purpose: development
+        spec:
+          containers:
+            - name: batch-container
+              image: busybox:latest         # to run command - we can use image as busybox
+              command:
+                - sh
+                - -c
+                - >
+                  echo "Starting backup"
+                  mkdir -p /backup &&
+                  mkdir -p /data &&
+                  cp -r /data /backup &&
+                  echo "Backup completed";
+              volumeMounts:
+                - name: data-volume-mounts
+                  mountPath: /data
+                - name: backup-volume-mounts
+                  mountPath: /backup
+            restartPolicy: OnFailure
+            volumes:
+              - name: data-volume
+                hostPath:
+                  path: /data
+                  type: DirectoryOrCreate
+              - name: backup-volume
+                hostPath:
+                  path: /backup
+                  type: DirectoryOrCreate
