@@ -135,3 +135,7 @@ Kubernetes is an open-source platform that automates deploying, scaling, and man
   - It creates a new ReplicaSet
   - Gradually scales down old RS and scales up new RS
   - This is the standard rolling update strategy
+
+  ```
+    kubectl set image deployment/nginx-deployment -n nginx nginx=nginx:1.27.3
+  ```
