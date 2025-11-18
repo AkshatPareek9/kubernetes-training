@@ -88,3 +88,37 @@ Kubernetes is an open-source platform that automates deploying, scaling, and man
     # delete the namespace
     kubectl delete ns nginx
   ```
+
+## Replication Controller
+
+  A ReplicationController ensures that a specified number of Pod replicas are always running.  
+  It is now deprecated and replaced by ReplicaSet, which is managed by a Deployment.
+
+## ReplicaSet
+
+  ReplicaSet = keeps the same number of identical Pods running.
+
+  A ReplicaSet ensures a specified number of identical Pods are always running. If a Pod dies, RS automatically creates a new one.
+  
+## Deployment
+
+  Deployment = manages ReplicaSets + gives rolling updates + rollbacks.
+
+  A Deployment is a higher-level controller built on top of ReplicaSets. It provides declarative updates, rolling updates, rollbacks, version history, and zero-downtime releases. Most stateless applications run as Deployments.
+  
+## DaemonSet
+
+  DaemonSet = runs one copy on each node, automatically appears on new nodes.
+
+  A DaemonSet ensures exactly one Pod runs on every node in the cluster. When new nodes join, the Pod is automatically added; when nodes leave, the Pod is removed. It is used for node-level agents like log collectors, monitoring agents, and CNI components.
+  
+## StatefulSet
+
+  StatefulSet = for applications that require:
+  
+  1. stable network identity  
+  2. persistent volume per Pod  
+  3. ordered deployment
+
+  A StatefulSet manages stateful applications requiring stable, unique Pod identifiers, deterministic ordering, and dedicated persistent volumes. It guarantees stable network names, persistent storage, and ordered rollout/scale operations.
+
