@@ -2,37 +2,58 @@
 
 Which apiVersion should I use?
 
-Kind	apiVersion  
-CertificateSigningRequest	certificates.k8s.io/v1beta1  
-ClusterRoleBinding	rbac.authorization.k8s.io/v1  
-ClusterRole	rbac.authorization.k8s.io/v1  
-ComponentStatus	v1  
-ConfigMap	v1  
-ControllerRevision	apps/v1  
-CronJob	batch/v1beta1  
-DaemonSet	extensions/v1beta1  
-Deployment	extensions/v1beta1  
-Endpoints	v1  
-Event	v1  
-HorizontalPodAutoscaler	autoscaling/v1  
-Ingress	extensions/v1beta1  
-Job	batch/v1  
-LimitRange	v1  
-Namespace	v1  
-NetworkPolicy	extensions/v1beta1  
-Node	v1  
-PersistentVolumeClaim	v1  
-PersistentVolume	v1  
-PodDisruptionBudget	policy/v1beta1  
-Pod	v1  
-PodSecurityPolicy	extensions/v1beta1  
-PodTemplate	v1  
-ReplicaSet	extensions/v1beta1  
-ReplicationController	v1  
-ResourceQuota	v1  
-RoleBinding	rbac.authorization.k8s.io/v1  
-Role	rbac.authorization.k8s.io/v1  
-Secret	v1  
-ServiceAccount	v1  
-Service	v1  
-StatefulSet	apps/v1  
+```
+| Resource    | apiVersion |
+| ----------- | ---------- |
+| Deployment  | `apps/v1`  |
+| StatefulSet | `apps/v1`  |
+| DaemonSet   | `apps/v1`  |
+| ReplicaSet  | `apps/v1`  |
+| Pod         | `v1`       |
+
+
+| Resource      | apiVersion             |
+| ------------- | ---------------------- |
+| Service       | `v1`                   |
+| Ingress       | `networking.k8s.io/v1` |
+| NetworkPolicy | `networking.k8s.io/v1` |
+
+| Resource       | apiVersion |
+| -------------- | ---------- |
+| ConfigMap      | `v1`       |
+| Secret         | `v1`       |
+| ServiceAccount | `v1`       |
+
+| Resource           | apiVersion                     |
+| ------------------ | ------------------------------ |
+| Role               | `rbac.authorization.k8s.io/v1` |
+| ClusterRole        | `rbac.authorization.k8s.io/v1` |
+| RoleBinding        | `rbac.authorization.k8s.io/v1` |
+| ClusterRoleBinding | `rbac.authorization.k8s.io/v1` |
+
+| Resource                    | apiVersion          |
+| --------------------------- | ------------------- |
+| PersistentVolume (PV)       | `v1`                |
+| PersistentVolumeClaim (PVC) | `v1`                |
+| StorageClass                | `storage.k8s.io/v1` |
+| VolumeAttachment            | `storage.k8s.io/v1` |
+
+| Resource                    | apiVersion                      |
+| --------------------------- | ------------------------------- |
+| HorizontalPodAutoscaler     | `autoscaling/v2` (recommended)  |
+| VerticalPodAutoscaler (VPA) | `autoscaling.k8s.io/v1` (addon) |
+
+| Resource | apiVersion |
+| -------- | ---------- |
+| Job      | `batch/v1` |
+| CronJob  | `batch/v1` |
+
+| Resource                 | apiVersion                |
+| ------------------------ | ------------------------- |
+| CustomResourceDefinition | `apiextensions.k8s.io/v1` |
+
+| Resource    | apiVersion           |
+| ----------- | -------------------- |
+| Certificate | `cert-manager.io/v1` |
+| Issuer      | `cert-manager.io/v1` |
+```
