@@ -139,3 +139,11 @@ Kubernetes is an open-source platform that automates deploying, scaling, and man
   ```
     kubectl set image deployment/nginx-deployment -n nginx nginx=nginx:1.27.3
   ```
+
+## Jobs and Cronjobs
+
+## Persistent Volume PV and Persistent Volume Claim PVC
+
+  To store/persist the data on pod deletion, we use PV for persistent volume and PVC for persistent volume claim.
+
+  
