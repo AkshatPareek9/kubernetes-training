@@ -1,0 +1,21 @@
+kind: Job
+apiVersion: batch/v1          # batch -> parallely work
+metadata:
+  name: demojob
+  namespace: nginx
+
+spec:
+  completions: 1
+  parallelism: 1    # if 2 then 2 pods will do same work.
+  template:
+    metadata:
+      name: demo-job
+      labels:
+        app: batch-task
+        purpose: development
+    spec:
+      containers:
+        - name: batch-container
+          image: busybox:latest         # to run command - we can use image as busybox
+          command: ["sh","-c","echo Hello world && sleep 10"]
+        restartPolicy: Never
