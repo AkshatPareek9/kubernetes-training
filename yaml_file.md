@@ -75,3 +75,28 @@
   kubectl get cronjob -n nginx -o wide
   kubectl delete -f cronjob.yaml
 ```
+
+# persistentvolume.yaml
+
+```
+  kubectl apply -f persistentvolume.yaml
+  kubectl get pv
+  kubectl delete -f persistentvolume.yaml
+```
+
+# persistentvolumeclaim.yaml
+
+```
+  kubectl apply -f persistentvolumeclaim.yaml
+  kubectl get pvc
+  kubectl delete -f persistentvolumeclaim.yaml
+```
+
+# Add the volume to the deployment and again apply the deployment.yaml
+
+```
+  kubectl apply -f deployment.yaml
+  kubectl get deployment -n nginx
+  kubectl get pods -n nginx -o wide
+  kubectl delete -f deployment.yaml
+```
