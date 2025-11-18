@@ -57,27 +57,34 @@ Kubernetes is an open-source platform that automates deploying, scaling, and man
     kubectl get pods -n <namespace>
   ```
 
-### Create Namespace
+## Pod
+
+  A Pod is the smallest deployable unit in Kubernetes.
+
+### 🧠 Why does Kubernetes need Pods?
+
+  Because Kubernetes does not manage containers directly. It manages Pods → Pods contain containers.
+  
+### Create Namespace and run the Pod
 
   ```
     # Creating namespace
     kubectl create ns nginx
     
     # run the pod
-    kubectl run nginx --image=nginx
+    kubectl run nginx-pod --image=nginx:latest --port=80 
     kubectl get pods
 
     # delete the pod
-    kubectl delete pod nginx
+    kubectl delete pod nginx-pod
 
     # run the pod in the namespace nginx  
-    kubectl run nginx --image=nginx -n nginx
+    kubectl run nginx-pod --image=nginx:latest --port=80 -n nginx
     kubectl get pods -n nginx
 
     # delete the pod in the namespace nginx
-    kubectl delete pod nginx -n nginx
+    kubectl delete pod nginx-pod -n nginx
 
     # delete the namespace
     kubectl delete ns nginx
   ```
-
