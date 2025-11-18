@@ -3,7 +3,7 @@ apiVersion: apps/v1
 metadata:
   name: nginx-deployment
   labels:
-    purpose: Deployment
+    purpose: development
   namespace: nginx
 
 spec:
