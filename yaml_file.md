@@ -30,3 +30,13 @@
   kubectl delete -f deployment.yaml
 ```
 
+<img width="300" height="300" alt="image" src="https://github.com/user-attachments/assets/f246c960-8d1e-4121-9f37-ec2242ac6736" />
+
+## Create the replicas of the deployment
+
+```
+  kubectl scale deployment/nginx-deployment -n nginx --replicas=3
+  kubectl get pods -n nginx -o wide
+```
+
+<img width="300" height="300" alt="image" src="https://github.com/user-attachments/assets/49026e92-d1ee-4e2d-98be-e0500ce46d74" />
