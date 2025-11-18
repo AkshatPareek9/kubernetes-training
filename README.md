@@ -47,6 +47,10 @@ Kubernetes is an open-source platform that automates deploying, scaling, and man
 
   A unit in which all the resources are allocated to a group.
 
+## Pod
+
+  A Pod is the smallest deployable unit in Kubernetes.
+  
   ```
     kubectl get namespace
     kubectl get ns
@@ -56,10 +60,6 @@ Kubernetes is an open-source platform that automates deploying, scaling, and man
 
     kubectl get pods -n <namespace>
   ```
-
-## Pod
-
-  A Pod is the smallest deployable unit in Kubernetes.
 
 ### 🧠 Why does Kubernetes need Pods?
 
