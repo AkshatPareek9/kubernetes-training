@@ -100,3 +100,23 @@
   kubectl get pods -n nginx -o wide
   kubectl delete -f deployment.yaml
 ```
+
+# service.yaml
+
+```
+  kubectl apply -f service.yaml
+  kubectl get service -n nginx
+  kubectl delete -f service.yaml
+```
+
+# Add forwarding port to access the pod using service from outside
+  Browser: https://localhost:80 
+  Error: Not working
+  Reason: Cluster is docker container. We have to forward the port of docker container. Need to expose the ip address.
+
+```
+  kubectl port-forward service/nginx-service -n nginx 80:80 --address=0.0.0.0
+
+  If permission denied then:
+  sudo -E kubectl port-forward service/nginx-service -n nginx 80:80 --address=0.0.0.0
+```
