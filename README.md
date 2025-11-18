@@ -140,11 +140,29 @@ Kubernetes is an open-source platform that automates deploying, scaling, and man
     kubectl set image deployment/nginx-deployment -n nginx nginx=nginx:1.27.3
   ```
 
-## Jobs and Cronjobs
+## Jobs
 
+  A Job is a Kubernetes workload resource that creates one or more Pods and ensures that a specified number of them complete successfully.  
+  If a Pod fails, the Job automatically creates a new Pod until the task finishes as expected.
+
+## Cronjobs
+
+  A CronJob in Kubernetes is a scheduled Job that runs at fixed times, dates, or intervals using a cron schedule format.  
+  It automatically creates a Job object according to the schedule, and those Jobs run Pods to complete the task.
+  
 ## Persistent Volume PV and Persistent Volume Claim PVC
 
   To store/persist the data on pod deletion, we use PV for persistent volume and PVC for persistent volume claim.
+
+## Persistent Volume PV
+  
+  A PersistentVolume (PV) is a piece of storage in the cluster that has been provisioned by an administrator or dynamically created using a StorageClass.  
+  It is a cluster-wide resource, independent of any specific Pod, and remains available even after the Pod is deleted.
+
+## Persistent Volume Claim PVC
+
+  A PersistentVolumeClaim (PVC) is a user request for storage that specifies the required size, access mode, and StorageClass.  
+  Kubernetes automatically binds the PVC to a suitable PV that meets the requirement.
 
 ## How user can access the pods?
 
@@ -155,6 +173,10 @@ Kubernetes is an open-source platform that automates deploying, scaling, and man
     1. ClusterIP : IP and Port assigned to it
     2. NodePort : Port take b/w 30000 - 32000. Also to add in port as nodePort: 30005
     3. LoadBalancer : used for cloud because loadbalancer is attached.
-    4. ExternalIP
+    4. ExternalName : DNS Name
     5. HeadLessService
   
+## Service
+
+  A Service in Kubernetes is an abstraction that defines a logical set of Pods and provides a consistent network endpoint (ClusterIP, NodePort, LoadBalancer, etc.) to access them.  
+  It uses labels and selectors to route traffic to the appropriate Pods, ensuring reliable communication even when Pods are dynamically created or destroyed.
