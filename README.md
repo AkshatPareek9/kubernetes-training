@@ -146,4 +146,15 @@ Kubernetes is an open-source platform that automates deploying, scaling, and man
 
   To store/persist the data on pod deletion, we use PV for persistent volume and PVC for persistent volume claim.
 
+## How user can access the pods?
+
+  Service Proxy
+
+  There are multiple type of IP in the service proxy:
+
+    1. ClusterIP : IP and Port assigned to it
+    2. NodePort : Port take b/w 30000 - 32000. Also to add in port as nodePort: 30005
+    3. LoadBalancer : used for cloud because loadbalancer is attached.
+    4. ExternalIP
+    5. HeadLessService
   
