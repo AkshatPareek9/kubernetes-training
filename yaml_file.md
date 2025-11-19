@@ -74,6 +74,13 @@
   kubectl get secret -n mysql -o wide
 ```
 
+# statefulset-namespace.yaml
+
+```
+  kubectl apply -f statefulset-namespace.yaml
+  kubectl get ns
+```
+
 # statefulset.yaml
 
 ```
