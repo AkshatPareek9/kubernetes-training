@@ -122,6 +122,8 @@ Kubernetes is an open-source platform that automates deploying, scaling, and man
 
   A StatefulSet manages stateful applications requiring stable, unique Pod identifiers, deterministic ordering, and dedicated persistent volumes. It guarantees stable network names, persistent storage, and ordered rollout/scale operations.
 
+  eg. mysql, mongoDB database
+
 ## Why rolling updates in deployment is different from ReplicaSet and StatefulSet?
 
   Rolling updates differ because Deployments manage ReplicaSets and implement rolling update logic. ReplicaSets alone don’t support updates. StatefulSets support rolling updates but in an ordered, slower, and safe way due to stable Pod identity and persistent storage requirements.
@@ -188,4 +190,11 @@ Kubernetes is an open-source platform that automates deploying, scaling, and man
 
   ingress-nginx is an ingress controller for kubernetes using NGINX as a reverse proxy and load balancer.
 
-## 
+## Config Maps
+
+  ConfigMap is a Kubernetes object used to store non-confidential configuration data in key-value pairs, allowing containers to stay decoupled from configuration.
+
+## Secrets
+
+  Secret is a Kubernetes object used to store sensitive information (passwords, keys, tokens) in Base64-encoded format to keep it secure and separate from application code.
+  
