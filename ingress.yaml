@@ -3,6 +3,8 @@ apiVersion: networking.k8s.io/v1
 metadata:
   name: nginx-notes-app-nginx
   namespace: nginx
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
 
 spec:
   rules:
@@ -17,7 +19,7 @@ spec:
                 number: 80
 
         - pathType: Prefix
-          path: /notes-app
+          path: /
           backend:
             service:
               name: notes-app-service
