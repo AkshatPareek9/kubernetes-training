@@ -60,6 +60,20 @@
   kubectl delete -f daemonsets.yaml
 ```
 
+# configmap.yaml
+
+```
+  kubectl apply -f configmap.yaml
+  kubectl get configmap -n mysql -o wide
+```
+
+# secret.yaml
+
+```
+  kubectl apply -f secret.yaml
+  kubectl get secret -n mysql -o wide
+```
+
 # statefulset.yaml
 
 ```
