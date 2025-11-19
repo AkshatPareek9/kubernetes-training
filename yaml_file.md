@@ -120,3 +120,21 @@
   If permission denied then:
   sudo -E kubectl port-forward service/nginx-service -n nginx 80:80 --address=0.0.0.0
 ```
+
+# ingress.yaml
+
+```
+  kubectl apply -f ingress.yaml
+  kubectl get ingress -n nginx
+  kubectl delete -f ingress.yaml
+```
+
+# Add forwarding port to expose ingress-nginx-controller (service)
+
+```
+  sudo -E kubectl port-forward service/ingress-nginx-controller -n ingress-nginx 8080:80 --address=0.0.0.0
+```
+
+  on browser:  
+    https://localhost:8080/nginx  
+    https://localhost:8080/
