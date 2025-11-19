@@ -60,6 +60,17 @@
   kubectl delete -f daemonsets.yaml
 ```
 
+# statefulset.yaml
+
+```
+  kubectl apply -f statefulset.yaml
+  kubectl get pods -n mysql -o wide
+  kubectl delete -f statefulset.yaml
+
+  # for go inside mysql container
+  kubectl exec -it mysql-stateful-0 -n mysql -- bash
+```
+
 # jobs.yaml
 
 ```
