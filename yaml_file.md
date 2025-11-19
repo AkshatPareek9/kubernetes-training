@@ -123,6 +123,17 @@
 
 # ingress.yaml
 
+Apply nginx-ingress-controller
+```
+kubectl apply -f https://kind.sigs.k8s.io/examples/ingress/deploy-ingress-nginx.yaml
+
+kubectl get ns
+# o/p: ingress-nginx | ACTIVE
+
+kubectl get svc -n ingress-nginx
+# o/p: ingress-nginx-controller | Type=LoadBalancer | ClusterIP = x.x.x.x
+```
+
 ```
   kubectl apply -f ingress.yaml
   kubectl get ingress -n nginx
