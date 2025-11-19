@@ -180,3 +180,12 @@ Kubernetes is an open-source platform that automates deploying, scaling, and man
 
   A Service in Kubernetes is an abstraction that defines a logical set of Pods and provides a consistent network endpoint (ClusterIP, NodePort, LoadBalancer, etc.) to access them.  
   It uses labels and selectors to route traffic to the appropriate Pods, ensuring reliable communication even when Pods are dynamically created or destroyed.
+
+## Ingress
+
+  Ingress is an API object that exposes HTTP and HTTPS routes from outside the cluster to services inside the cluster, using rules to define routing.  
+  It requires an Ingress Controller to work.
+
+  ingress-nginx is an ingress controller for kubernetes using NGINX as a reverse proxy and load balancer.
+
+## 
