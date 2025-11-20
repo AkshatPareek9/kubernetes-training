@@ -198,6 +198,12 @@ Kubernetes is an open-source platform that automates deploying, scaling, and man
 
   Secret is a Kubernetes object used to store sensitive information (passwords, keys, tokens) in Base64-encoded format to keep it secure and separate from application code.
 
+## Resource Quotas
+
+## Limits
+
+## Probes
+
 ## Taint and Toleration
 
   Taint = A way to tell your kubernetes cluster that stop the scheduling on the particular pod.
@@ -222,4 +228,24 @@ Kubernetes is an open-source platform that automates deploying, scaling, and man
 
   Note: By default, control plane is untolerated tainted, thats why no pod is scheduled on control plane.
 
+## HPA
+
+  Horizontal Pod AutoScaling: If traffic load increases on POD, then it will increase POD replicas.
+  eg, Django
+
+  [POD] [POD] [POD]  
+  [--- Replicas ---]  
+
+## VPA
+
+  Vertical Pod AutoScaling: If resource load increases on POD, then it will increase the POD resources.
+  Generally used for Stateful Set Applications
+
+  [POD-100m-200m]  ----> [POD-500m-1000m]  
+  [-------- increase resource ----------]  
+
+## KEDA
+
+  Kubernetes Event Driven AutoScaling: Based on the metrics/event it selects either HPA/VPA.
   
+  If traffic load then HPA and If resource shortage then VPA.
