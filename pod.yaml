@@ -12,3 +12,10 @@ spec:
       image: nginx:latest
       ports:
         - containerPort: 80
+
+  tolerations:
+    - key: "prod"
+      operator: "Equal"
+      value: "true"
+      effect: "NoSchedule"
+      # this means if any pod, having key=prod, value=true with Noscheduling then it should tolerate it to schedule.
