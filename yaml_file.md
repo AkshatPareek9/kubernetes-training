@@ -181,3 +181,19 @@ kubectl get svc -n ingress-nginx
   on browser:  
     https://localhost:8080/nginx  
     https://localhost:8080/
+
+# hpa.yaml
+
+```
+  kubectl apply -f hpa.yaml
+  kubectl get hpa -n nginx
+  kubectl delete -f hpa.yaml
+```
+
+# vpa.yaml
+
+```
+  kubectl apply -f vpa.yaml
+  kubectl get vpa -n nginx
+  kubectl delete -f vpa.yaml
+```
