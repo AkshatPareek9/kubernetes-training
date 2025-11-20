@@ -197,4 +197,29 @@ Kubernetes is an open-source platform that automates deploying, scaling, and man
 ## Secrets
 
   Secret is a Kubernetes object used to store sensitive information (passwords, keys, tokens) in Base64-encoded format to keep it secure and separate from application code.
+
+## Taint and Toleration
+
+  Taint = A way to tell your kubernetes cluster that stop the scheduling on the particular pod.
+
+  Toleration = A way to tell your kubernetes cluster that you can still schedule the tainted pod.
+  
+  ```
+  # Taint the pod
+
+  kubectl taint node cluster-worker1 prod=true:NoSchedule
+  kubectl taint node cluster-worker2 prod=true:NoSchedule
+  kubectl taint node cluster-worker3 prod=true:NoSchedule
+  ```
+
+  ```
+  # Untaint the pod
+
+  kubectl taint node cluster-worker1 prod=true:NoSchedule-
+  kubectl taint node cluster-worker2 prod=true:NoSchedule-
+  kubectl taint node cluster-worker3 prod=true:NoSchedule-
+  ```
+
+  Note: By default, control plane is untolerated tainted, thats why no pod is scheduled on control plane.
+
   
